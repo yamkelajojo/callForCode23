@@ -1,0 +1,338 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("assets/fonts/Oswald-VariableFont_wght.ttf");
+}
+
+* {
+  font-family: "Oswald";
+  margin: 0;
+  padding: 0;
+}
+
+#layerBody {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#title {
+  font-size: 50px;
+}
+
+.py-5 {
+  padding: 1% 20.5%;
+}
+
+.py-4 {
+  padding: 1% 10%;
+}
+
+.py-3 {
+  padding: 1% 20.5%;
+}
+
+.py-2 {
+  padding: 1% 20.5%;
+}
+
+#productsGrid {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  padding: 1% 40.5%;
+  /* border: solid 1px rgb(0, 255, 4); */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navTabsDiv {
+  /* border: solid 1px red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+  font-size: 1.3rem;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+#title {
+  font-size: 2rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.39); /* Semi-transparent black background */
+  z-index: 2; /* Ensure the overlay is on top of other content */
+  /* display: none; */
+}
+
+#theSlotArea {
+  flex: 1;
+}
+
+#biggerHeader {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 1px;
+}
+
+footer.navbar {
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 1px;
+  padding: 2% auto;
+}
+
+/* -------------------------THE SIDE NAVIGATION MENU------------------------- */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: max-content; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: white;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 1px;
+}
+
+#sidenavTitleDiv,
+#sidenavLinksDiv {
+  /* padding: 20px 20px 0 20px; */
+  /* background-color: rgb(194, 194, 194); */
+  padding: 0 30px;
+}
+
+#sidenavTitleDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-top: 12%;
+  padding-bottom: 12%;
+  box-shadow: rgba(0, 0, 0, 0.068) 0px 1px 10px 1px;
+}
+
+#sidenavLinksDiv {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.sidenavLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.041) 0px 1px 2px 0px;
+}
+
+.sidenavLink > a {
+  font-size: 1.2rem;
+}
+#sidenavTitle {
+  display: flex;
+  align-items: center;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  text-decoration: none;
+  color: #818181;
+  /* display: block; */
+  transition: 0.3s;
+}
+
+#sidenavTitle {
+  font-size: 0.8rem;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  font-size: 36px;
+}
+
+/* -------------------------THE SIDE NAVIGATION MENU------------------------- */
+
+/* __________________________MEDIA QUERIES___________________________________ */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .navbar {
+    /* padding: 1% 1000px; */
+    /* border: solid 1px red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #smallerNavHeader {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  #biggerHeader {
+    display: flex;
+    justify-content: center;
+  }
+
+  #theSlotArea {
+    /* padding: 1% 20.5%; */
+    align-self: center;
+    max-width: 1200px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .hamburgerButton {
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .navbar {
+    padding: 1% 5%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .hamburgerButton {
+    display: none !important;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .navbar {
+    /* border: solid 1px rgb(0, 34, 255); */
+    padding: 1.2% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #theSlotArea {
+    padding: 1% 10%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+  .hamburgerButton {
+    /* justify-self: flex-end !important; */
+    /* align-self: center; */
+  }
+
+  #navTabsDiv {
+    display: none !important;
+    background-color: rgb(81, 19, 139);
+  }
+
+  nav {
+    justify-content: flex-start;
+  }
+
+  .navbar {
+    justify-content: flex-start;
+    padding: 1.5% 8%;
+  }
+  .logoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(
+      100% - 50px
+    ); /* Adjust width to leave space for hamburger button */
+  }
+
+  #theSlotArea {
+    padding: 4% 8%;
+  }
+
+  #smallerNavHeader {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  #biggerHeader {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    padding: 5% 8%;
+  }
+
+  .logoDiv {
+    font-size: large;
+  }
+
+  #title {
+    font-size: 1rem;
+  }
+
+  #navTabsDiv {
+    display: none;
+    background-color: saddlebrown;
+  }
+  /* nav {
+    display: flex;
+  } */
+
+  .hamburgerButton {
+    justify-self: flex-start !important;
+  }
+
+  #theSlotArea {
+    padding: 4% 8%;
+  }
+
+  footer.navbar {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 1px;
+    padding: 12px 0;
+  }
+}
+/* __________________________MEDIA QUERIES___________________________________ */
