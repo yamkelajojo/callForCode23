@@ -652,9 +652,11 @@ const errorHandler = (async function errorhandler(error, event) {
   event.node.res.end(html);
 });
 
+const _lazy_cfXzwg = () => Promise.resolve().then(function () { return ninja$1; });
 const _lazy_C8osm7 = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
+  { route: '/api/ninja', handler: _lazy_cfXzwg, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_C8osm7, lazy: true, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_C8osm7, lazy: true, middleware: false, method: undefined }
 ];
@@ -783,6 +785,17 @@ const template$1 = _template;
 const errorDev = /*#__PURE__*/Object.freeze({
   __proto__: null,
   template: template$1
+});
+
+const ninja = defineEventHandler(() => {
+  return {
+    message: "Hello Ninjas"
+  };
+});
+
+const ninja$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: ninja
 });
 
 const appRootId = "__nuxt";
@@ -1028,7 +1041,7 @@ const renderer$1 = /*#__PURE__*/Object.freeze({
   default: renderer
 });
 
-const _virtual__headStatic = {"headTags":"<meta charset=\"utf-8\">\n<title>ThaSto&#x27;</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta name=\"ThaSto\" content=\"Get your top Merchandise Right Here\">\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css\">","bodyTags":"","bodyTagsOpen":"","htmlAttrs":"","bodyAttrs":""};
+const _virtual__headStatic = {"headTags":"<meta charset=\"utf-8\">\n<title>ThaSto&#x27;</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta name=\"description\" content=\"Get your top Merchandise Right Here\">\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css\">","bodyTags":"","bodyTagsOpen":"","htmlAttrs":"","bodyAttrs":""};
 
 const _virtual__headStatic$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,

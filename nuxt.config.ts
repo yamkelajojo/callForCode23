@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     head: {
       title: "ThaSto'",
       meta: [
-        { name: "ThaSto", content: "Get your top Merchandise Right Here" },
+        { name: "description", content: "Get your top Merchandise Right Here" },
       ],
       link: [
         {

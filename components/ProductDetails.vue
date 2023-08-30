@@ -1,8 +1,12 @@
 <template>
-  <div>
-    <p>{{ product.title }}</p>
-    <p>{{ product.price }}</p>
-    <p>{{ product.id }}</p>
+  <div class="flex">
+    <div class="imgContainer">
+      <img :src="product.image" alt="" />
+    </div>
+    <div class="detailsContainer">
+      <p>{{ product.title }}</p>
+      <p>${{ product.price }}</p>
+    </div>
   </div>
 </template>
 
@@ -10,4 +14,13 @@
 const { product } = defineProps(["product"]);
 </script>
 
-<style scoped></style>
+<style scoped>
+img {
+  max-width: 250px;
+  height: auto;
+}
+
+p {
+  margin: 20px auto;
+}
+</style>
